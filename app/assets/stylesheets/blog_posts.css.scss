@@ -6,4 +6,23 @@
 	input[type=text]{
 		width: 70%
 	}
+
+	.blog-content{
+		width: 80%;
+		padding: 20px 0;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.all-blog-posts{
+	h1{
+		margin-bottom: 30px;
+		width: 80%;
+	}
+	.post{
+		border-bottom: 1px solid black;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
 }

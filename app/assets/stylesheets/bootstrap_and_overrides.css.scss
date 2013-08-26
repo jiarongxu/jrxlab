@@ -1,6 +1,55 @@
 @import "bootstrap";
-body { padding-top: 60px; }
-@import "bootstrap-responsive";
+body { padding-top: 0px; }
+body { background-color: white; }
+body, h1, h2, h3,h4,h5, p, a, span{
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom{
+	padding-top: 10px;
+	border-top: 10px solid #333;
+	position: relative;
+}
+
+h1, h2, h3,h4,h5{
+	font-weight: 400;
+}
+
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 960px;
+}
+
+.navbar-inner {
+    background-color: #fff;
+    background-image: none;
+    background-repeat: repeat-x;
+    border: none;
+    //border-radius: 4px 4px 4px 4px;
+    box-shadow: none !important;
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    .brand{
+    	font-weight: 400;
+    	font-size: 28px;
+    }
+    .container{
+    	border-bottom: 1px solid #ccc;
+    	padding: 20px 10px 20px;
+    	a{
+    		color: #333;
+    	}
+    }
+
+    .nav > li > a {
+	    color: #333;
+	    float: none;
+	    padding: 10px 15px;
+	    text-decoration: none;
+	}
+}
 
 h1{
 	font-size: 30px;

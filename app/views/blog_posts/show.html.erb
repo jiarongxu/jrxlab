@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @blog_post.title %>
-</p>
+</h1>
+<p>Written by <%= @blog_post.user.name %> <%= @blog_post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+<div class="blog-content">
+  <%= markdown(@blog_post.content) %>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @blog_post.content %>
-</p>
 
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
 <%= link_to 'Back', blog_posts_path %>
