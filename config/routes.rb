@@ -1,4 +1,6 @@
 Jrxlab::Application.routes.draw do
+  resources :links
+
   resources :blog_posts
 
   root :to => "home#index"
