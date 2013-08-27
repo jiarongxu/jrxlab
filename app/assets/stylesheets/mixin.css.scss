@@ -1,0 +1,13 @@
+@mixin post-layout{
+    .left{
+        float: left;
+        width: 70%;
+    }
+    .right{
+        float: right;
+        width: 25%;
+        padding-right: 20px;
+        font-size: 13px;
+        text-align: right;
+    }
+}

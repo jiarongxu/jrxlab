@@ -1,33 +1,16 @@
 <h1>Listing links</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="links">
 
-  <tbody>
-    <% @links.each do |link| %>
-      <tr>
-        <td><%= link.title %></td>
-        <td><%= link.url %></td>
-        <td><%= link.description %></td>
-        <td><%= link.user_id %></td>
-        <td><%= link_to 'Show', link %></td>
-        <td><%= link_to 'Edit', edit_link_path(link) %></td>
-        <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <% @links.each do |link| %>
+    
+    <div class="link">
+      <h2 class="clearfix"><span class="left"><%= link_to link.title, link.url, :target => "_blank" %></span><span class="right">Posted on <%= link.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span></h2> 
+    </div>
 
+  <% end %>
+
+</div>  
 <br>
 
 <%= link_to 'New Link', new_link_path %>
