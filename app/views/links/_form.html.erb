@@ -5,7 +5,8 @@
     <%= f.input :title %>
     <%= f.input :url %>
     <%= f.input :description %>
-    <%= f.input :user_id %>
+    <%= f.input :tag_list %>
+    <%= f.input :user_id, :as => :hidden, :value => current_user.id %>
   </div>
 
   <div class="form-actions">
