@@ -16,6 +16,9 @@ module BlogPostsHelper
       superscript: true,
       gh_blockcode: true
     }
+    if text.nil?
+      text = ""
+    end
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
 end

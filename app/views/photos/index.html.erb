@@ -1,0 +1,8 @@
+<h1>Photos</h1>
+<div class="all_photos">
+<% @photos.each do |photo| %>
+	<%= link_to "https://plus.google.com/u/0/photos/107065417601585255035/albums/"+@album_id+"/"+photo.id, :target => "_blank" do %>
+  	<%= image_tag photo.content.src %>
+  <% end %>
+<% end %>
+</div>

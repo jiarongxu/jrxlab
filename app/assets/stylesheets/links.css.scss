@@ -1,8 +1,21 @@
 // Place all the styles related to the links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tagged-width{
+	font-size: 24px;
+}
+
 .links{
 	.link{
 		@include post-layout;
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+		padding-top: 0px;
+	}
+	.tags{
+		float: left;
+		width: 80%;
+		margin-left: 20%;
 	}
 }

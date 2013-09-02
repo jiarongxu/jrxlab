@@ -4,7 +4,11 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    if params[:tag]
+      @links = Link.tagged_with(params[:tag])
+    else
+      @links = Link.all
+    end
   end
 
   # GET /links/1
@@ -69,6 +73,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url, :description, :user_id)
+      params.require(:link).permit(:title, :url, :description, :user_id, :tag_list)
     end
 end

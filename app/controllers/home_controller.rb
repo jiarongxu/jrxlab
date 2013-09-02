@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    @blog_posts = BlogPost.all.limit(6)
   end
 end
