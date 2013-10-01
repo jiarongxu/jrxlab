@@ -8,4 +8,5 @@ Jrxlab::Application.routes.draw do
   resources :users
   get 'tags/:tag', to: 'links#index', as: :tag
   get 'photos', to: 'photos#index', as: :photos
+  get 'about', to: "static#about", as: :about
 end

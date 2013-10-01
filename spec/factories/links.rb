@@ -6,5 +6,6 @@ FactoryGirl.define do
     url "MyString"
     description "MyText"
     user_id 1
+    created_at "2013-09-13"
   end
 end

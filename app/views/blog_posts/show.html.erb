@@ -1,7 +1,7 @@
 <h1>
   <%= @blog_post.title %>
 </h1>
-<p>Posted on <%= @blog_post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+<p>Posted on <%= @blog_post.created_date %></p>
 <div class="blog-content">
   <%= markdown(@blog_post.content) %>
 </div>

@@ -1,0 +1,56 @@
+.introduction{
+	.about{
+		width: 75%;
+		float: left;
+	}
+	.contact{
+		width: 25%;
+		float: right;
+		dt{
+			float: left;
+			width: 30%;
+		}
+		dd{
+			float: left;
+			width: 70%;
+			margin: 0;
+		}
+	}
+}
+
+.expeirence, .education, .skill{
+	.entry{
+		border-bottom: 1px solid #ccc;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	@include post-layout;
+	.left{
+		p{
+			margin-top: 10px;
+		}
+	}
+	.right{
+		h3{
+			font-size: 20px;
+			margin-top: 0px;
+			span{
+				float: right;
+			}
+		}
+		p{
+			font-size: 15px;
+			line-height: 24px;
+			margin-bottom: 20px;
+			span{
+				float: right;
+			}
+		}
+		ul{
+			li{
+				font-size: 15px;
+			}
+		}
+	}
+}

@@ -5,7 +5,7 @@
   <% @links.each do |link| %>
     
     <div class="link clearfix">
-      <h2 class="clearfix"><span class="left"><%= link_to link.title, link.url, :target => "_blank" %></span><span class="right">Posted on <%= link.created_at.strftime("%Y-%m-%d") %> <% if current_user %><em><%= link.created_at.strftime("%H:%M:%S") %> </em><% end %></span></h2> 
+      <h2 class="clearfix"><span class="right"><%= link_to link.title, link.url, :target => "_blank" %></span><span class="left">Posted on <%= link.created_at.strftime("%Y-%m-%d") %> <% if current_user %><em><%= link.created_at.strftime("%H:%M:%S") %> </em><% end %></span></h2> 
       <p class="tags">Tags: <%= raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
     </div>
 
