@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require pygments
+ *= require select2
 */
 @import "mixin.css.scss";
 @import "layout.css.scss";
@@ -24,9 +25,18 @@
 
 .content {
   background-color: #fff;
-  padding: 20px;
-  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  margin: 0 0px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
+  form{
+    padding-top: 20px;
+  }
+}
+.index{
+  .content{
+    h1{
+      border-bottom: 1px solid #ccc;
+    }
+  }
 }

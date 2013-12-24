@@ -15,4 +15,5 @@
 //= require bootstrap
 //= require turbolinks
 //= require tinymce-jquery
+//= require select2
 //= require_tree .
