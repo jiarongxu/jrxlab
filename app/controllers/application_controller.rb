@@ -7,4 +7,13 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  def tags_array
+    tags = ActsAsTaggableOn::Tag.all
+    tags_array = Array.new
+    tags.each do |tag|
+      tags_array << tag.name
+    end
+    return tags_array
+  end
+
 end
