@@ -15,10 +15,12 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
+    @tags = tags_array('BlogPost')
   end
 
   # GET /blog_posts/1/edit
   def edit
+    @tags = tags_array('BlogPost')
   end
 
   # POST /blog_posts
@@ -69,6 +71,6 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :content, :excerpt)
+      params.require(:blog_post).permit(:title, :content, :excerpt, :tag_list)
     end
 end
