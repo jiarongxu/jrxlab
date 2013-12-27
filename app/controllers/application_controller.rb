@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
-  def tags_array
-    tags = ActsAsTaggableOn::Tag.all
+  def tags_array(taggable_type)
+    taggings = ActsAsTaggableOn::Tagging.find_all_by_taggable_type(taggable_type).uniq {|tagging| tagging.tag_id}
     tags_array = Array.new
-    tags.each do |tag|
-      tags_array << tag.name
+    taggings.each do |tagging|
+      tags_array << ActsAsTaggableOn::Tag.find(tagging.tag_id).name
     end
     return tags_array
   end

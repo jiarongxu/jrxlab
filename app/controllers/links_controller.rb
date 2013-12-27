@@ -19,12 +19,12 @@ class LinksController < ApplicationController
   # GET /links/new
   def new
     @link = Link.new
-    @tags_array = tags_array
+    @tags_array = tags_array('Link')
   end
 
   # GET /links/1/edit
   def edit
-    @tags_array = tags_array
+    @tags_array = tags_array('Link')
   end
 
   # POST /links
