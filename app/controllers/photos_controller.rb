@@ -8,7 +8,7 @@ class PhotosController < ApplicationController
 
 	  @album_id = album.id
 
-  	@photos = client.album.show(@album_id).entries
+  	@photos = client.album.show(@album_id).entries.reverse
 	  
   end
 end

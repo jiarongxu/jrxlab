@@ -11,6 +11,13 @@
  *= require_self
  *= require pygments
  *= require select2
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
 */
 @import "mixin.css.scss";
 @import "layout.css.scss";
@@ -37,6 +44,17 @@
   .content{
     h1{
       border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+#masonry-container{
+  .box{
+    margin: 0 5px 5px 0;
+    padding-bottom: 4px;
+    img{
+      width: auto;
+      border-radius: 5px;
     }
   }
 }

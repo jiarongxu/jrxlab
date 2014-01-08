@@ -16,4 +16,25 @@
 //= require turbolinks
 //= require tinymce-jquery
 //= require select2
+//= require masonry/jquery.masonry
 //= require_tree .
+
+var s,
+    jrxlab = {
+
+        settings: {
+            masonryContainer: $("#masonry-container")
+        },
+
+        init: function() {
+            s = this.settings;
+            this.startMasonry();
+        },
+
+        startMasonry: function() {
+            s.masonry.masonry({
+                itemSelector: '.box'
+            });
+        }
+
+    };
