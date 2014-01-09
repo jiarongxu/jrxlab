@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def tags_array(taggable_type)
-    taggings = ActsAsTaggableOn::Tagging.find_all_by_taggable_type(taggable_type).uniq {|tagging| tagging.tag_id}
+    taggings = ActsAsTaggableOn::Tagging.where(:taggable_type => taggable_type).uniq {|tagging| tagging.tag_id}
     tags_array = Array.new
     taggings.each do |tagging|
       tags_array << ActsAsTaggableOn::Tag.find(tagging.tag_id).name

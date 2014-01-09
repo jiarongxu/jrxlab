@@ -15,12 +15,12 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
-    @tags = tags_array('BlogPost')
+    @tags_array = tags_array('BlogPost')
   end
 
   # GET /blog_posts/1/edit
   def edit
-    @tags = tags_array('BlogPost')
+    @tags_array = tags_array('BlogPost')
   end
 
   # POST /blog_posts
