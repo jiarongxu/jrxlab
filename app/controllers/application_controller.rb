@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     taggings.each do |tagging|
       tags_array << ActsAsTaggableOn::Tag.find(tagging.tag_id).name
     end
-    return tags_array
+    return tags_array.uniq
   end
 
 end
