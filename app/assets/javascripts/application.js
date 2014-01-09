@@ -29,12 +29,24 @@ var s,
         init: function() {
             s = this.settings;
             this.startMasonry();
+            this.saveAsDraft();
         },
 
         startMasonry: function() {
-            s.masonry.masonry({
+            s.masonryContainer.masonry({
                 itemSelector: '.box'
+            });
+        },
+        saveAsDraft: function(){
+            $('#submit_draft').click(function(event){
+                event.preventDefault();
+                $('#blog_post_draft').val(1);
+                $('form').submit();
             });
         }
 
     };
+
+$(document).ready(function(){
+    jrxlab.init();
+})
