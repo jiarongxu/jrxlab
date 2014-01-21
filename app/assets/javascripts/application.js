@@ -30,6 +30,7 @@ var s,
             s = this.settings;
             this.startMasonry();
             this.saveAsDraft();
+            this.publish();
         },
 
         startMasonry: function() {
@@ -43,6 +44,13 @@ var s,
                 $('#blog_post_draft').val(1);
                 $('form').submit();
             });
+        },
+        publish: function(){
+            $("#blog_publish").click(function(event){
+                event.preventDefault();
+                $('#blog_post_draft').val(0);
+                $('form').submit()
+            })
         }
 
     };
