@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require turbolinks
+//= require tinymce-jquery
 //= require select2
+//= require masonry/jquery.masonry
+//= require_tree .
