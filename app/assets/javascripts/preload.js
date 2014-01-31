@@ -17,4 +17,4 @@
 //= require tinymce-jquery
 //= require select2
 //= require masonry/jquery.masonry
-//= require_tree .
+//= require_self
