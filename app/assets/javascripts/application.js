@@ -1,9 +1,3 @@
-//= require bootstrap
-//= require turbolinks
-//= require tinymce-jquery
-//= require masonry/jquery.masonry
-//= require_tree .
-
 var s,
     jrxlab = {
 
