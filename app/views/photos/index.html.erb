@@ -1,3 +1,10 @@
+<script>
+    $(document).ready(function(){
+    	$("#masonry-container").masonry({
+            itemSelector: '.box'
+    	});
+    });
+</script>
 <h1>Photos</h1>
 <div class="all_photos transitions-enabled infinite-scroll clearfix" id="masonry-container">
 <% @photos.each do |photo| %>
