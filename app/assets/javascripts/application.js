@@ -29,7 +29,4 @@ var s,
 
 $(document).ready(function(){
     jrxlab.init();
-    $("#masonry-container").masonry({
-        itemSelector: '.box'
-    });
 })
