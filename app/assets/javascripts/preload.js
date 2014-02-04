@@ -18,3 +18,8 @@
 //= require select2
 //= require masonry/jquery.masonry
 //= require_self
+$(document).ready(function(){
+	$("#masonry-container").masonry({
+        itemSelector: '.box'
+	});
+});
