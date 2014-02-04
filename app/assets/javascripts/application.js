@@ -2,21 +2,14 @@ var s,
     jrxlab = {
 
         settings: {
-            masonryContainer: $("#masonry-container")
         },
 
         init: function() {
             s = this.settings;
-            this.startMasonry();
             this.saveAsDraft();
             this.publish();
         },
 
-        startMasonry: function() {
-            s.masonryContainer.masonry({
-                itemSelector: '.box'
-            });
-        },
         saveAsDraft: function(){
             $('#submit_draft').click(function(event){
                 event.preventDefault();
@@ -36,4 +29,7 @@ var s,
 
 $(document).ready(function(){
     jrxlab.init();
+    $("#masonry-container").masonry({
+        itemSelector: '.box'
+    });
 })
